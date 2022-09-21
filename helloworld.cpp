@@ -3,26 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "helloworld.hpp"
 
 using namespace std;
-
-class Box
-{
-public:
-    double getLength();
-    double getWidth();
-    double getHeight();
-    void setBox(double &len, double &wid, double &hei);
-
-    Box();
-    Box(double len, double wid, double hei);
-    ~Box();
-
-private:
-    double length; // 盒子的长度
-    double width;  // 盒子的宽度
-    double height; // 盒子的高度
-};
 
 // constructor for empty box
 Box::Box()
@@ -78,6 +61,16 @@ int main()
 
     Box box1(1.0, 1.0, 1.0);
     Box box2;
+
+    Person me;
+    me.age = 24;
+    me.name = "Zhetao";
+    me.gender = Sex::Male;
+
+    cout << "My name is: " << me.name << endl;
+    cout << "My Age is: " << me.age << endl;
+    cout << "My Gender is: " << ((me.gender == 0 ) ? "Female" : "Male") << endl;
+
 
     double b2_len = 2.0;
     double b2_wid = 2.0;
